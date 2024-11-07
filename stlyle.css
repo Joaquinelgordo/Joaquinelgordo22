@@ -76,11 +76,6 @@ h2{
   
   }
  
-body {
-  position: relative; /* Asegúrate de que el body sea relativo para la superposición */
-  margin: 0;
-  height: 100vh; /* Asegúrate de que el body ocupe toda la altura de la ventana */
-}
 
 .overlay {
   position: fixed; /* Usa posición fija para cubrir toda la página */
