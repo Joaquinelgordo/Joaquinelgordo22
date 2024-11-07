@@ -1,18 +1,15 @@
 body{
-  background-image:url(fondo\ 3.jpg) ;
-  background-position: center center;
-  background-repeat: repeat;
-  background-size: cover;
+background-color: rgb(245, 243, 154);
 }
 #a{
   font-size: 29px;
-  color:  white;
+  color:  rgb(0, 0, 0);
   text-align: justify;
   
 }
 #b{ 
   font-size: 35px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: center;
 
 }
@@ -22,15 +19,15 @@ body{
 }
 .h{
   font-size: 25px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .k{
   font-size: 25px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .l{
   font-size: 25px;
-  color:  white;
+  color:  rgb(0, 0, 0);
   
 }
 .imagen-depatamento{
@@ -39,11 +36,11 @@ body{
    justify-content: center;
 }
 h1{
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 h2{
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 
@@ -61,7 +58,7 @@ h2{
   }
   ul li a{
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     padding: 5px 20px;
     border: 1px solid transparent;
     transition: 0.5s ease;
@@ -91,7 +88,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
   z-index: 1; /* Asegúrate de que esté por debajo del contenido */
 }
 
@@ -173,4 +169,9 @@ hr{
 }
 p{
   text-decoration: none;
+  color: #000;
+  
+}
+.dias{
+  color: #000;
 }
