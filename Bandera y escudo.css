@@ -181,10 +181,10 @@ button {
 }
 /* Fondo general para la página */
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tu-imagen-de-fondo.jpg');
+  
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   font-family: Arial, sans-serif;
-  color: #fff;
+  background-color: rgb(245, 243, 154);
 }
