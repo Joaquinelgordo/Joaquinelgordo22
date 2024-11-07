@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="stlyle.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="overlay"></div> <!-- Superposición negra translúcida -->
+
+    <header>
+        <div class="main">
+        </div>
+        <ul class="navegacion">
+            <li class="active"><a href="inicio.html"><i class="fa fa-home"></i>Inicio</a></li>
+            <li><a href="index.html">Información General</a></li>
+            <li><a href="Galeria.html"> Imagenes</a></li>
+            <li><a href="Bandera y escudo.html">Bandera y Escudo</a></li>
+            <li><a href="distritos y poblacion.html">Distritos y Población</a></li>
+            <li><a href="pagina.html">Acerca de</a></li>
+
+        </ul>
+    </header>
+    <main>
+    <h1>Departamento Misiones</h1>
+
+  
+        <h1 id="b">Información General :</h1>
+        <p id="a">El Departamento de Misiones es conocido por su rica cultura, que se refleja en sus tradiciones y en la
+            influencia de las misiones jesuíticas que se establecieron en el siglo XVIII. La región cuenta con una
+            geografía variada, que incluye áreas montañosas y ríos, lo que la convierte en un lugar atractivo para el
+            ecoturismo y actividades al aire libre.
+            La economía de Misiones se basa principalmente en la agricultura, la ganadería y la producción de yerba
+            mate, un producto emblemático de la cultura paraguaya. Además, la región es famosa por su producción de
+            artesanías y su gastronomía.
+            Misiones es un lugar que combina historia, cultura y naturaleza, ofreciendo a sus visitantes una experiencia
+            única en Paraguay.</p>
+
+        <h1>Algunas imágenes del departamento:</h1>
+        <img src="80-1_FOTO-RECORRE-LAS-MISIONES-JESUITICAS-GUARANI-DJI_0603-aerea.jpg" class="imagen-depatamento"
+            alt="Misión Jesuitica">
+        <!-- Video de YouTube incrustado con iframe -->
+        <!-- Etiqueta de video con controles -->
+      
+            <iframe width="350" height="300"src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTradicionMisioneraPy%2Fposts%2Fpfbid02b799zYCstHVYmpREeADrhkKCxwFnsNNUtC4rJtvRHv9KnovZGY3s1Kmk4T1jxLxWl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </video>
+        <img src="images san miguel.jpg" class="imagen-depatamento" alt="San Miguel">
+        <h2>Fiesta de la Tradición Misionera</h2>
+        <p id="a">Lo que se observa en el video es de una fiesta que sucedió en Misiones durante cuatro días en Febrero
+            del 2024 en los días</p>
+        <ul>
+            <li class="dias"> Jueves 1 de Febrero</li>
+            <hr>
+            <li class="dias"> Viernes 2 de Febrero </li>
+            <hr>
+            <li class="dias"> Sabado 3 de Febrero </li>
+            <hr>
+            <li class="dias"> Domingo 4 de Febrero</li>
+            <hr>
+        </ul>
+
+        <div class="music-widget">
+            <!-- Botón de menú con icono giratorio -->
+            <button id="toggleMenu" class="icono-musica">🎵</button>
+
+            <!-- Menú desplegable -->
+            <div id="menu" class="menu">
+                <audio id="audio" src="Tradición en Misiones - Canción - Paraguay - Misiones..mp3"></audio>
+                <button id="playPauseBtn">▶️</button>
+                <button onclick="bajarVolumen()">🔉</button>
+                <button onclick="subirVolumen()">🔊</button>
+            </div>
+        </div>
+
+        <script>
+            const audio = document.getElementById('audio');
+            const icono = document.getElementById('toggleMenu');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const menu = document.getElementById('menu');
+            let menuVisible = false;
+
+            // Función para mostrar/ocultar el menú
+            icono.addEventListener('click', () => {
+                menuVisible = !menuVisible;
+                menu.style.display = menuVisible ? 'flex' : 'none';
+            });
+
+            // Función para reproducir/pausar música
+            playPauseBtn.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseBtn.innerText = '⏸️';
+                    icono.classList.remove('pausado');
+                } else {
+                    audio.pause();
+                    playPauseBtn.innerText = '▶️';
+                    icono.classList.add('pausado');
+                }
+            });
+
+            // Función para bajar volumen
+            function bajarVolumen() {
+                audio.volume = Math.max(0, audio.volume - 0.1);
+            }
+
+            // Función para subir volumen
+            function subirVolumen() {
+                audio.volume = Math.min(1, audio.volume + 0.1);
+            }
+        </script>
+</body>
+
+</html>

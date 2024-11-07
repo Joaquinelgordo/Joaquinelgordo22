@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Inicio</title>
+	<link rel="stylesheet" type="text/css" href="inicio.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<img class="logo-img" src="image.png">
+			</div>
+			<ul class="navegacion">
+				<li class="active"><a href="inicio.html"><i class="fa fa-home"></i>Inicio</a></li>
+				<li><a href="index.html">Información General</a></li>
+				<li><a href="Galeria.html"> Imagenes</a></li>
+				<li><a href="Bandera y escudo.html">Bandera y Escudo</a></li>
+				<li><a href="distritos y poblacion.html">Distritos y Población</a></li>
+				<li><a href="pagina.html">Acerca de</a></li>
+
+
+			</ul>
+
+		</div>
+		<div class="title">
+			<h1>MISIONES</h1>
+		</div>
+		<div class="ubi" ><a href="https://maps.app.goo.gl/ye5FkjVU1VY6jx3G7"><img  src="ubicacion.png"  alt="" ></a></div>
+		
+	</header>
+	
+
+	<div class="music-widget">
+		<!-- Botón de menú con icono giratorio -->
+		<button id="toggleMenu" class="icono-musica">🎵</button>
+
+		<!-- Menú desplegable -->
+		<div id="menu" class="menu">
+			<audio id="audio" src="Tradición en Misiones - Canción - Paraguay - Misiones..mp3"></audio>
+			<button id="playPauseBtn">▶️</button>
+			<button onclick="bajarVolumen()">🔉</button>
+			<button onclick="subirVolumen()">🔊</button>
+		</div>
+	</div>
+
+	<script>
+		const audio = document.getElementById('audio');
+		const icono = document.getElementById('toggleMenu');
+		const playPauseBtn = document.getElementById('playPauseBtn');
+		const menu = document.getElementById('menu');
+		let menuVisible = false;
+
+		// Función para mostrar/ocultar el menú
+		icono.addEventListener('click', () => {
+			menuVisible = !menuVisible;
+			menu.style.display = menuVisible ? 'flex' : 'none';
+		});
+
+		// Función para reproducir/pausar música
+		playPauseBtn.addEventListener('click', () => {
+			if (audio.paused) {
+				audio.play();
+				playPauseBtn.innerText = '⏸️';
+				icono.classList.remove('pausado');
+			} else {
+				audio.pause();
+				playPauseBtn.innerText = '▶️';
+				icono.classList.add('pausado');
+			}
+		});
+
+		// Función para bajar volumen
+		function bajarVolumen() {
+			audio.volume = Math.max(0, audio.volume - 0.1);
+		}
+
+		// Función para subir volumen
+		function subirVolumen() {
+			audio.volume = Math.min(1, audio.volume + 0.1);
+		}
+	</script>
+	<section></section>
+	<div class="survey-container">
+		<form id="encuestaForm"
+		action="https://formspree.io/f/xqakeyyo"
+		method="POST">
+			<table>
+				<tr>
+					<th colspan="2">Encuesta de Opinión de la Página</th>
+				</tr>
+				<tr>
+					<td><label for="email">Correo Electrónico:</label></td>
+					<td><input type="email" id="email" placeholder="Tu correo" required></td>
+				</tr>
+				<tr>
+					<td>¿Cómo calificarías tu experiencia en la página?</td>
+					<td>
+						<label><input type="radio" name="experiencia" value="Excelente"> Excelente</label><br>
+						<label><input type="radio" name="experiencia" value="Buena"> Buena</label><br>
+						<label><input type="radio" name="experiencia" value="Regular"> Regular</label><br>
+						<label><input type="radio" name="experiencia" value="Mala"> Mala</label>
+					</td>
+				</tr>
+				<tr>
+					<td>¿Recomendarías esta página a otros?</td>
+					<td>
+						<label><input type="radio" name="recomendacion" value="Sí"> Sí</label>
+						<label><input type="radio" name="recomendacion" value="No"> No</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Comentarios adicionales:</td>
+					<td><textarea id="comentarios" rows="4" placeholder="Escribe tus comentarios..."></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<button type="submit" class="submit-btn">Enviar Encuesta</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<script>
+		function enviarEncuesta() {
+			// Obtener valores del formulario
+			const email = document.getElementById("email").value;
+			const experiencia = document.querySelector('input[name="experiencia"]:checked')?.value || "No respondido";
+			const recomendacion = document.querySelector('input[name="recomendacion"]:checked')?.value || "No respondido";
+			const comentarios = document.getElementById("comentarios").value || "Sin comentarios";
+
+			// Crear el cuerpo del correo
+			const mensaje = `
+						Correo Electrónico: ${email}
+						Calificación de la experiencia: ${experiencia}
+						¿Recomendaría la página?: ${recomendacion}
+						Comentarios adicionales: ${comentarios}
+					`;
+
+			// Crear enlace mailto
+			const enlaceMailto = `mailto:tu-correo@example.com?subject=Encuesta de Opinión&body=${encodeURIComponent(mensaje)}`;
+
+			// Abrir el cliente de correo predeterminado con el enlace
+			window.location.href = enlaceMailto;
+		}
+	</script>
+	<script src="encuesta.js"></script>
+	
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+body{
+    background-image: url(fondo\ 2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	min-height: 200px;
+}
+ul{
+	float:left;
+	list-style-type: none;
+	margin-top: 20px;
+	margin-right:0px ;
+    margin-right: 10px;
+}
+ul li{
+	display: inline-block;
+}
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.5s ease;
+
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+background-color:#fff;
+	color: #000;
+
+}
+
+.logo img{
+	float: left;
+	width: 100px;
+	height: 100px;
+    position: absolute;
+}
+
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.title{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.title h1{
+	color: #fff;
+	font-size: 85px;
+}
+
+.button{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.btn{
+	border: 1px solid #fff;
+	padding: 5px 20px;
+	color: #fff;
+	transition: 0.6s ease;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.sub-menu{
+	display: none;
+    top:6%;
+    position: relative;
+}
+
+.sub-menu ul{
+	position: absolute;
+
+}
+
+.main ul li:hover .sub-menu
+{
+	display: block;
+	position: absolute;
+	background-color: rgb(0,45,117);
+	margin-top: 12px;
+	margin-left: -8px;
+}
+
+.main ul li:hover .sub-menu ul 
+{
+	display: block;
+	margin:6px;
+
+}
+.main ul li:hover .sub-menu ul li
+{
+	width: 75px;
+	padding: 5px;
+	border-bottom: 1px#fff;
+	background: transparent;
+	transition: 0.4s ease;
+	text-align: left;
+	border-radius: 0;
+	
+}
+
+.main ul li:hover .sub-menu ul li:last-child 
+{
+	border-bottom: none;
+}
+.navegacion{
+    margin-left:  150px;;
+}
+.music-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del botón de menú y del icono giratorio */
+.icono-musica {
+    font-size: 30px;
+    color: #FF6347;
+    cursor: pointer;
+    animation: girar 3s linear infinite;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* Estilos para el menú horizontal */
+.menu {
+    display: none; /* Oculto por defecto */
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+/* Estilos para los botones de control */
+button {
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+/* Iconos de volumen y reproducción */
+#playPauseBtn {
+    font-size: 18px;
+}
+
+/* Animación de giro para el icono */
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pausar animación cuando el audio está en pausa */
+.pausado {
+    animation-play-state: paused;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Light background for the entire page */
+    margin: 0;
+}
+
+/* Container for the survey to center it below the rest of the page */
+.survey-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add some padding */
+}
+
+/* Estilos para la tabla de la encuesta */
+table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevents overflow of rounded corners */
+}
+
+/* Estilos para el encabezado de la tabla */
+th {
+    background-color: #000000; /* Green header */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Estilos para las celdas de la tabla */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para los inputs y textarea */
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: border-color 0.3s ease;
+}
+
+/* Change border color on focus */
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #000000; /* Highlight on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Botón de envío */
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    border-radius: 4px; /* Rounded corners for button */
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Estilos para etiquetas */
+label {
+    margin-bottom: 5px;
+    display: block; /* Ensures labels take up the full width */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    table {
+        width: 90%; /* Make the table more responsive */
+    }
+}
+.ubi{
+    padding-top: 320px;
+    padding-left: 320px;
+}

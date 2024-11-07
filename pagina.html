@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Inicio</title>
+  <link rel="stylesheet" type="text/css" href="pagina.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="main">
+    </div>
+    <ul class="navegacion">
+      <li class="active"><a href="inicio.html"><i class="fa fa-home"></i>Inicio</a></li>
+				<li><a href="index.html">Información General</a></li>
+				<li><a href="Galeria.html"> Imagenes</a></li>
+				<li><a href="Bandera y escudo.html">Bandera y Escudo</a></li>
+				<li><a href="distritos y poblacion.html">Distritos y Población</a></li>
+				<li><a href="pagina.html">Acerca de</a></li>
+
+
+    </ul>
+  </header>
+  <div class="negro">
+  <H1>Historia </H1>
+  <p>Es un departamento del Paraguay, fue fundado en 1906 con el nombre original de San Ignacio. Esta ciudad está
+    ubicada a 196 Km de la capital del Paraguay, Asunción.
+    La población de Misiones se inició a principios del siglo XVIII con la tarea evangelizadora de las misiones
+    jesuíticas que se habían establecido inicialmente en el antiguo Guairá. Esta reducción emigró para instalarse entre
+    los ríos Tebicuary y el Paraná a partir del año 1632.
+    Al producirse este hecho, 7 pueblos pasaron a formar parte del Brasil, quince de ellos pasaron a territorio
+    argentino y ocho al Paraguay. Los pueblos que permanecieron en territorio paraguayo se concentraron en los
+    departamentos de Itapúa y Misiones. Estas localidades son: San Ignacio Guazú, Santa María de Fe, Santa Rosa,
+    Santiago, San Cosme y Damián, Itapúa, Trinidad y Jesús.
+    Todo este departamento está marcado por la presencia de las antiguas misiones jesuíticas que tuvieron su centro en
+    este departamento, de ahí su nombre. En muchas de sus ciudades se encuentran museos con arte sacro jesuítico. Para
+    los efectos de la estructuración política y administrativa del Estado, el territorio nacional se divide, de mayor a
+    menor grado, en departamentos, distritos o municipios que, dentro de los límites la constitución y las leyes, gozan
+    de autonomía política, administrativa y normativa para la gestión de sus intereses, y de autarquía en la recaudación
+    e inversión de sus recursos.
+    Según el censo 2023, tiene una población de 133.236 habitantes, que representa el 1,8% de la población total del
+    país.
+  </div>
+  </p>
+  <div class="negro">
+  <H1>Economía</H1>
+  <p>La actividad económica básica de este departamento es la ganadería vacuna. También cuenta con producción de ganado
+    porcino, ovino, equino, y caprino, este último en menor escala.
+    En cuanto a la actividad agrícola, los campos cultivados están ubicados preferentemente en la zona norte y centro
+    del departamento. En sus tierras se cultiva arroz, soja, maíz, naranja dulce, caña de azúcar, batata y algodón.
+    Mientras que al sur del departamento la principal fuente de ingreso proviene de la pesca y de la fuente de trabajo
+    que crea la Hidroeléctrica Binacional Yacyretá, lo cual ha modificado completamente la infraestructura de la ciudad
+    Ayolas y su entorno, transformándola en la ciudad más moderna del departamento
+  </p>
+</div>
+  <div class="negro">
+  <h1>Turismo </h1>
+  <p>El principal atractivo turístico lo constituyen las playas formadas a orillas de los ríos Paraná y Tebicuary. La
+    localidad de Villa Florida ofrece a los visitantes sus paisajes. La moderna ciudad de Ayolas posee clubes sociales
+    que cuentan con todas las comodidades para practicar todo tipo de deportes como fútbol de campo y de playa, tenis,
+    padel , basquetball, fútbol de salón, gym, patinaje, atletismo, entre otros.
+    Este departamento se destaca también por haber sido protagonista de la tarea de evangelización de los sacerdotes
+    jesuitas que fundaron en el lugar numerosas reducciones. Varios pueblos conservan las reliquias de esa época como
+    las construcciones coloniales, y las iglesias. Parte de este patrimonio histórico está expuesto en museos con
+    muestras de los tallados en madera realizados por los indígenas en la reducciones.
+  </p>
+</div>
+  <div class="negro">
+ <h1 >Economía: </h1>
+ <p> La actividad económica básica de este departamento es la ganadería vacuna. También cuenta con producción de ganado porcino, ovino, equino, y caprino, este último en menor escala.
+  En cuanto a la actividad agrícola, los campos cultivados están ubicados preferentemente en la zona norte y centro del departamento. En sus tierras se cultiva arroz, soja, maíz, naranja dulce, caña de azúcar, batata y algodón.
+  Mientras que al sur del departamento la principal fuente de ingreso proviene de la pesca y de la fuente de trabajo que crea la Hidroeléctrica Binacional Yacyretá, lo cual ha modificado completamente la infraestructura de la ciudad Ayolas y su entorno, transformándola en la ciudad más moderna del departamento.
+
+  </p>
+</div>
+  <ul class="b"><h3>Lugares turisticos</h3></ul>
+  <li class="c" ><h3>Museo diocesano</h2></li>
+  <li class="c"> <h3>Kurusu Cerro</h3></li>
+  <li class="c"> <h3>Ykua Teja</h3></li>
+
+  <ul class="b"></ul>
+  <li class="e"><img src="museo.jpg" alt=""></li>
+  <li class="e"> <img src="cerro.jpg" alt=""></li>
+  <li class="e"> <img src="teja.jpg" alt=""></li>
+  <div class="music-widget">
+		<!-- Botón de menú con icono giratorio -->
+		<button id="toggleMenu" class="icono-musica">🎵</button>
+
+		<!-- Menú desplegable -->
+		<div id="menu" class="menu">
+			<audio id="audio" src="Tradición en Misiones - Canción - Paraguay - Misiones..mp3"></audio>
+			<button id="playPauseBtn">▶️</button>
+			<button onclick="bajarVolumen()">🔉</button>
+			<button onclick="subirVolumen()">🔊</button>
+		</div>
+	</div>
+
+	<script>
+		const audio = document.getElementById('audio');
+		const icono = document.getElementById('toggleMenu');
+		const playPauseBtn = document.getElementById('playPauseBtn');
+		const menu = document.getElementById('menu');
+		let menuVisible = false;
+
+		// Función para mostrar/ocultar el menú
+		icono.addEventListener('click', () => {
+			menuVisible = !menuVisible;
+			menu.style.display = menuVisible ? 'flex' : 'none';
+		});
+
+		// Función para reproducir/pausar música
+		playPauseBtn.addEventListener('click', () => {
+			if (audio.paused) {
+				audio.play();
+				playPauseBtn.innerText = '⏸️';
+				icono.classList.remove('pausado');
+			} else {
+				audio.pause();
+				playPauseBtn.innerText = '▶️';
+				icono.classList.add('pausado');
+			}
+		});
+
+		// Función para bajar volumen
+		function bajarVolumen() {
+			audio.volume = Math.max(0, audio.volume - 0.1);
+		}
+
+		// Función para subir volumen
+		function subirVolumen() {
+			audio.volume = Math.min(1, audio.volume + 0.1);
+		}
+	</script>
+</body>
