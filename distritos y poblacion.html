@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Distritos </title>
+	<link rel="stylesheet" type="text/css" href="distritos.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		 <ul class="navegacion">
+		 <li class="active"><a href="inicio.html"><i class="fa fa-home"></i>Inicio</a></li>
+		 <li><a href="index.html">Información General</a></li>
+		 <li><a href="Galeria.html"> Imagenes</a></li>
+         <li><a href="Bandera y escudo.html">Bandera y Escudo</a></li>
+		 <li><a href="distritos y poblacion.html">Distritos y Población</a></li>
+		 <li><a href="pagina.html">Acerca de</a></li>
+		
+		 
+		</ul>
+
+		 </div>
+  </header>
+  
+  <main>
+    <h1>Distritos del departamento de Misiones: Está dividido en 10 distritos y San Juan Bautista es su capital.</h1>
+    <!-- Cuadro de información de Distritos y Habitantes -->
+    <div class="recuadro-info">
+        <h2>Distritos y Habitantes</h2>
+        <ul class="info-list">
+            <li><strong>-Ayolas:</strong> 19,739 habitantes</li>
+            <li><strong>-San Ignacio:</strong> 36,958 habitantes</li>
+            <li><strong>-San Juan Bautista:</strong> 25,495 habitantes</li>
+            <li><strong>-San Miguel:</strong> 6,165 habitantes</li>
+            <li><strong>-San Patricio:</strong> 3,775 habitantes</li>
+            <li><strong>-Santa Rosa:</strong> 18,642 habitantes</li>
+            <li><strong>-Santiago:</strong> 6,504 habitantes</li>
+            <li><strong>-Villa Florida:</strong> 3,943 habitantes</li>
+            <li><strong>-Yabebyry:</strong> 2,664 habitantes</li>
+        </ul>
+    </div>
+   <img class="mapa" src="mapa distritos.png" alt="" >
+    <!-- Cuadro de información de Límites -->
+    <div class="recuadro-info">
+        <h2>Límites</h2>
+        <ul class="info-list">
+            <li><strong>Al Norte:</strong> Con los departamentos de Paraguarí y Caazapá.</li>
+            <li><strong>Al Sur:</strong> Con el Río Paraná que establece el límite con la Argentina, específicamente con la Provincia de Corrientes.</li>
+            <li><strong>Al Este:</strong> Con el Departamento de Itapúa.</li>
+            <li><strong>Al Oeste:</strong> Con el Departamento de Ñeembucú.</li>
+        </ul>
+    </div>
+</main>
+<div class="music-widget">
+    <!-- Botón de menú con icono giratorio -->
+    <button id="toggleMenu" class="icono-musica">🎵</button>
+
+    <!-- Menú desplegable -->
+    <div id="menu" class="menu">
+        <audio id="audio" src="Tradición en Misiones - Canción - Paraguay - Misiones..mp3"></audio>
+        <button id="playPauseBtn">▶️</button>
+        <button onclick="bajarVolumen()">🔉</button>
+        <button onclick="subirVolumen()">🔊</button>
+    </div>
+</div>
+
+<script>
+    const audio = document.getElementById('audio');
+    const icono = document.getElementById('toggleMenu');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const menu = document.getElementById('menu');
+    let menuVisible = false;
+
+    // Función para mostrar/ocultar el menú
+    icono.addEventListener('click', () => {
+        menuVisible = !menuVisible;
+        menu.style.display = menuVisible ? 'flex' : 'none';
+    });
+
+    // Función para reproducir/pausar música
+    playPauseBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.innerText = '⏸️';
+            icono.classList.remove('pausado');
+        } else {
+            audio.pause();
+            playPauseBtn.innerText = '▶️';
+            icono.classList.add('pausado');
+        }
+    });
+
+    // Función para bajar volumen
+    function bajarVolumen() {
+        audio.volume = Math.max(0, audio.volume - 0.1);
+    }
+
+    // Función para subir volumen
+    function subirVolumen() {
+        audio.volume = Math.min(1, audio.volume + 0.1);
+    }
+</script>
+
+</body>
+</html>
